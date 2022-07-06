@@ -57,7 +57,7 @@ onMounted(() => {
         <a-assets>
           <a-asset-item
             id="car"
-            src="/assets/vr/man_gltf/scene.gltf"
+            src="/assets/Haya.gltf"
             crossOrigin="anonymous"
           ></a-asset-item>
         </a-assets>
