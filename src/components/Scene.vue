@@ -56,20 +56,24 @@ onMounted(() => {
       <a-scene>
         <a-assets>
           <a-asset-item
-            id="car"
+            id="model_haya"
             src="/assets/Haya.gltf"
             crossOrigin="anonymous"
           ></a-asset-item>
         </a-assets>
-        <a-gltf-model src="#car" position="0 0 0"></a-gltf-model>
-        <a-entity
-          light="color: #FFFFFF; intensity: 0.6"
-          position="1 1 0"
-        ></a-entity>
+        <a-light
+          type="ambient"
+          color="#ffffff"
+          position="0 0 0.1"
+          distance="0.2"
+          angle="90"
+        ></a-light>
+        <a-gltf-model src="#model_haya" position="0 0 0"></a-gltf-model>
+
         <a-entity
           id="ground"
           geometry="primitive: box; width: 20; height: 0.01; depth: 20"
-          material="color: #eee;"
+          material="color: #ffffff;"
           position="0 0 -4"
         ></a-entity>
         <a-entity
