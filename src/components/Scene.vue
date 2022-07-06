@@ -61,33 +61,50 @@ onMounted(() => {
             crossOrigin="anonymous"
           ></a-asset-item>
         </a-assets>
-        <a-light
-          type="ambient"
-          color="#ffffff"
-          position="0 0 0.1"
-          distance="0.2"
-          angle="90"
-        ></a-light>
-        <a-gltf-model src="#model_haya" position="0 0 0"></a-gltf-model>
+        <!-- <a-entity
+          light="type:ambient; color:#FFF; "
+          position="0 0 5"
+        ></a-entity> -->
 
-        <a-entity
-          id="ground"
-          geometry="primitive: box; width: 20; height: 0.01; depth: 20"
-          material="color: #ffffff;"
-          position="0 0 -4"
-        ></a-entity>
-        <a-entity
-          light="type: directional; color: #FFF; intensity: 0.6"
-          position="-0.5 1 1"
-        ></a-entity>
-        <a-entity
-          id="leftHand"
-          hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"
-        ></a-entity>
-        <a-entity
-          id="rightHand"
-          hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
-        ></a-entity>
+        <a-light
+          type="directional"
+          color="white"
+          intensity="1.5"
+          angle="90"
+          position="2 0 2"
+        ></a-light>
+        <a-light
+          type="directional"
+          color="white"
+          intensity="2"
+          angle="90"
+          position="-2 0 2"
+        ></a-light>
+
+        <a-light
+          type="point"
+          color="white"
+          intensity="3"
+          position="4 4 4"
+        ></a-light>
+        <a-light
+          type="point"
+          color="white"
+          intensity="3"
+          position="-4 -4 4"
+        ></a-light>
+        <a-gltf-model src="#model_haya" position="1 0 -2"></a-gltf-model>
+        <a-ocean
+          width="200"
+          depth="200"
+          density="40"
+          opacity="1"
+          position="0 -0.4 0"
+        ></a-ocean>
+        <a-sky src="#sky" position="0 -200 0"></a-sky>
+        <a-entity position="0 -0.5 3">
+          <a-camera></a-camera>
+        </a-entity>
       </a-scene>
     </template>
   </VR>
